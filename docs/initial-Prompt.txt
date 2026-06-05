@@ -1,0 +1,487 @@
+You can give Cursor a detailed product-definition prompt like this:
+
+---
+
+# SmartOps Product Documentation Prompt
+
+You are a Senior Product Manager, Solution Architect, Mobile App Architect, UX Designer, and Startup CTO.
+
+I am building a mobile-first business management platform called **SmartOps**.
+
+## Product Vision
+
+SmartOps is an all-in-one business operating system designed primarily for small businesses, with the ability to scale to medium and large businesses over time.
+
+The goal is to help business owners manage daily operations from a single application instead of using multiple tools.
+
+The platform should start as a mobile app (Android and iOS) and later expand into a web application and full SaaS platform.
+
+---
+
+## Target Users
+
+### Phase 1
+
+Small businesses including:
+
+* Retail shops
+* Grocery stores
+* Manufacturing units
+* Service businesses
+* Agencies
+* Workshops
+* Distributors
+* Restaurants and cafes
+* Construction contractors
+* Local businesses with 1–100 employees
+
+### Future Phases
+
+* Medium-sized businesses
+* Multi-branch businesses
+* Enterprises
+* Franchises
+
+---
+
+# Core Features
+
+Create detailed requirements for the following modules:
+
+## Dashboard
+
+Business overview showing:
+
+* Revenue
+* Expenses
+* Profit
+* Cash Flow
+* Employee Count
+* Attendance Summary
+* Salary Summary
+* Outstanding Payments
+* Business Health Score
+* Growth Trends
+
+---
+
+## Expense Management
+
+Track:
+
+* Daily expenses
+* Operational costs
+* Vendor payments
+* Utility bills
+* Maintenance costs
+* Purchase records
+
+Features:
+
+* Categories
+* Recurring expenses
+* Attach invoices
+* Search and filtering
+* Expense analytics
+
+---
+
+## Revenue Management
+
+Track:
+
+* Sales
+* Service income
+* Other income
+
+Features:
+
+* Revenue trends
+* Monthly reports
+* Customer-wise revenue
+* Revenue forecasting
+
+---
+
+## Profit & Margin Analysis
+
+Calculate:
+
+* Gross Profit
+* Net Profit
+* Margin %
+* Cost Analysis
+
+Provide visual charts and reports.
+
+---
+
+## Employee Management
+
+Store:
+
+* Employee profiles
+* Documents
+* Contact details
+* Job roles
+* Departments
+* Joining dates
+* Salary information
+
+Features:
+
+* Employee lifecycle management
+* Employee history
+* Performance notes
+
+---
+
+## Attendance Management
+
+Features:
+
+* Daily attendance
+* Check-in/check-out
+* Shift tracking
+* Leave tracking
+* Attendance reports
+
+Future:
+
+* GPS attendance
+* Geofencing
+* Face recognition attendance
+
+---
+
+## Salary & Payroll Management
+
+Features:
+
+* Salary structures
+* Payroll processing
+* Overtime calculations
+* Bonus management
+* Deductions
+* Payslip generation
+
+Future:
+
+* Automated payroll
+* Bank integrations
+
+---
+
+## Customer Management
+
+CRM module:
+
+* Customer profiles
+* Customer history
+* Contact information
+* Purchase history
+* Outstanding payments
+
+Features:
+
+* Customer analytics
+* Follow-up reminders
+
+---
+
+## Vendor Management
+
+Store:
+
+* Vendor details
+* Purchase records
+* Payment history
+* Outstanding balances
+
+---
+
+## Inventory Management
+
+Features:
+
+* Product catalog
+* Stock tracking
+* Purchase management
+* Low stock alerts
+* Inventory valuation
+
+Future:
+
+* Barcode support
+* QR code support
+* Warehouse management
+
+---
+
+## Task Management
+
+Features:
+
+* Assign tasks
+* Track progress
+* Due dates
+* Team collaboration
+
+---
+
+## Reports & Analytics
+
+Generate:
+
+* Revenue reports
+* Expense reports
+* Payroll reports
+* Attendance reports
+* Profit reports
+* Inventory reports
+
+Export:
+
+* PDF
+* Excel
+* CSV
+
+---
+
+## Notifications
+
+Support:
+
+* Push notifications
+* In-app notifications
+* Email notifications
+
+Examples:
+
+* Salary due
+* Attendance missing
+* Low stock
+* Pending payments
+
+---
+
+# AI Features (Future)
+
+Design future-ready AI capabilities:
+
+* Business insights
+* Profit recommendations
+* Expense optimization suggestions
+* Revenue forecasting
+* Employee productivity insights
+* AI business assistant
+* Natural language reporting
+
+Example:
+
+"Show me profit for last month"
+
+"Which expense category increased most?"
+
+---
+
+# User Roles
+
+Create detailed RBAC design.
+
+Roles:
+
+* Owner
+* Admin
+* Manager
+* HR
+* Accountant
+* Employee
+
+Define permissions for each role.
+
+---
+
+# Multi-Business Support
+
+One user can manage:
+
+* Multiple companies
+* Multiple branches
+* Multiple locations
+
+Data isolation must be maintained.
+
+---
+
+# Mobile App Architecture
+
+Design scalable architecture including:
+
+## Frontend
+
+Recommend:
+
+* Flutter
+
+Explain:
+
+* Folder structure
+* State management
+* Clean architecture
+* Feature-based architecture
+
+---
+
+## Backend
+
+Recommend:
+
+* Node.js + NestJS
+
+or
+
+* Java Spring Boot
+
+Compare both.
+
+Design:
+
+* REST APIs
+* Authentication
+* Authorization
+* Validation
+* Logging
+* Monitoring
+
+---
+
+## Database
+
+Recommend:
+
+* PostgreSQL
+
+Design:
+
+* ER Diagram
+* Tables
+* Relationships
+* Multi-tenant strategy
+
+---
+
+## Authentication
+
+Support:
+
+* Email login
+* Phone login
+* OTP login
+* Social login
+
+Future:
+
+* SSO
+
+---
+
+## Security
+
+Cover:
+
+* JWT
+* Refresh Tokens
+* Encryption
+* Audit Logs
+* Rate Limiting
+* Role-Based Access Control
+
+---
+
+# Web Application Future Planning
+
+Create a roadmap for future web application support.
+
+Requirements:
+
+* Shared backend
+* Shared APIs
+* Shared business logic
+* Responsive admin dashboard
+* Enterprise management features
+
+Recommend:
+
+Frontend:
+
+* React
+* Next.js
+
+Architecture:
+
+* Monorepo approach
+
+---
+
+# Scalability Planning
+
+Design for:
+
+### Phase 1
+
+1,000 users
+
+### Phase 2
+
+10,000 users
+
+### Phase 3
+
+100,000 users
+
+### Phase 4
+
+1,000,000+ users
+
+Discuss:
+
+* Horizontal scaling
+* Caching
+* Queue systems
+* Background jobs
+* File storage
+* CDN strategy
+
+---
+
+# Deliverables
+
+Generate complete documentation including:
+
+1. Product Requirements Document (PRD)
+2. Feature Breakdown
+3. User Stories
+4. Mobile App Architecture
+5. Backend Architecture
+6. Database Design
+7. API Design Strategy
+8. Security Architecture
+9. Web Expansion Strategy
+10. AI Roadmap
+11. Scalability Roadmap
+12. MVP Scope
+13. Version 2 Roadmap
+14. Version 3 Roadmap
+15. Development Timeline
+16. Technical Risks
+17. Business Risks
+18. Competitive Analysis
+19. Suggested UI/UX Flows
+20. Recommended Technology Stack
+
+The output should be written as production-grade startup documentation suitable for engineering, product, and investor discussions.
+
+---
+
+This prompt should get Cursor to generate a very comprehensive foundation document for SmartOps instead of just a feature list.

@@ -1,0 +1,15 @@
+{
+  "@@locale": "en",
+  "appTitle": "SmartOps",
+  "@appTitle": {
+    "description": "Application name"
+  },
+  "splashTagline": "Manage your business in one place",
+  "@splashTagline": {
+    "description": "Tagline on splash and login screens"
+  },
+  "btnSignInGoogle": "Sign in with Google",
+  "@btnSignInGoogle": {
+    "description": "Google Sign-In button label"
+  }
+}
