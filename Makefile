@@ -28,7 +28,7 @@ mobile-google:
 	AUTH_DEV_MODE=false ./scripts/start-mobile.sh
 
 test-backend:
-	cd backend && python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements.txt && pytest
+	cd backend && python3 -m venv .venv && . .venv/bin/activate && pip install -r requirements-dev.txt && pytest
 
 test-mobile:
 	cd mobile && flutter pub get && dart run build_runner build --delete-conflicting-outputs && flutter test

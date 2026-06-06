@@ -18,7 +18,7 @@ if [ ! -d .venv ]; then
 fi
 # shellcheck source=/dev/null
 source .venv/bin/activate
-pip install -q -r requirements.txt
+  pip install -q -r requirements-dev.txt
 
 echo "==> Initializing database schema on Neon..."
 python3 - <<'PY'

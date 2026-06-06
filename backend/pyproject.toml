@@ -1,9 +1,23 @@
 [project]
-name = "smartops-backend"
-version = "0.1.0"
-description = "SmartOps FastAPI backend"
+name = "smartops-api"
+version = "1.0.0"
 requires-python = ">=3.12"
+dependencies = [
+    "fastapi>=0.115.0,<0.116.0",
+    "uvicorn[standard]>=0.32.0,<0.33.0",
+    "pydantic>=2.9.0,<3.0.0",
+    "pydantic-settings>=2.6.0,<3.0.0",
+    "sqlalchemy[asyncio]>=2.0.36,<3.0.0",
+    "asyncpg>=0.30.0,<0.31.0",
+    "greenlet>=3.1.0,<4.0.0",
+    "alembic>=1.14.0,<2.0.0",
+    "python-jose[cryptography]>=3.3.0,<4.0.0",
+    "google-auth>=2.36.0,<3.0.0",
+    "httpx>=0.28.0,<0.29.0",
+    "python-multipart>=0.0.17,<0.1.0",
+    "email-validator>=2.2.0,<3.0.0",
+    "requests>=2.32.0,<3.0.0",
+]
 
-[tool.pytest.ini_options]
-testpaths = ["tests"]
-asyncio_mode = "auto"
+[tool.vercel]
+entrypoint = "app.main:app"
