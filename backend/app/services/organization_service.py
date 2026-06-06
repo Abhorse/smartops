@@ -3,6 +3,7 @@ from __future__ import annotations
 from sqlalchemy import select
 from sqlalchemy.ext.asyncio import AsyncSession
 
+from app.core.database import ensure_default_roles
 from app.models import ExpenseCategory, Organization, OrganizationMember, ProductCategory, RevenueCategory, Role, User, UserPreference
 from app.services.auth_service import slugify
 
@@ -43,6 +44,7 @@ class OrganizationService:
         business_type: str | None,
         language: str,
     ) -> Organization:
+        await ensure_default_roles(self.session)
         owner_role = await self.session.scalar(select(Role).where(Role.name == "owner"))
         if owner_role is None:
             raise RuntimeError("Owner role is not seeded")

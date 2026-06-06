@@ -5,14 +5,15 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1.router import api_router
 from app.core.config import get_settings
-from app.core.database import init_db
+from app.core.database import init_db, should_run_startup_db_init
 
 settings = get_settings()
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await init_db()
+    if should_run_startup_db_init():
+        await init_db()
     yield
 
 
