@@ -1,10 +1,19 @@
+from contextlib import asynccontextmanager
+
 from fastapi import FastAPI, Request, Response
 from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1.router import api_router
 from app.core.config import get_settings
+from app.core.database import init_db
 
 settings = get_settings()
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await init_db()
+    yield
 
 
 def create_app() -> FastAPI:
@@ -13,6 +22,7 @@ def create_app() -> FastAPI:
         version=settings.latest_app_version,
         docs_url="/docs",
         openapi_url="/api/v1/openapi.json",
+        lifespan=lifespan,
     )
 
     app.add_middleware(
