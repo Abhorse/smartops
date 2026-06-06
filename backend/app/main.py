@@ -44,6 +44,19 @@ def create_app() -> FastAPI:
 
     app.include_router(api_router, prefix="/api/v1")
 
+    @app.get("/", include_in_schema=False)
+    async def root() -> dict[str, str]:
+        return {
+            "status": "ok",
+            "health": "/api/v1/health",
+            "docs": "/docs",
+        }
+
+    @app.get("/favicon.ico", include_in_schema=False)
+    @app.get("/favicon.png", include_in_schema=False)
+    async def favicon() -> Response:
+        return Response(status_code=204)
+
     return app
 
 
