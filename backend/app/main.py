@@ -5,14 +5,15 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from app.api.v1.router import api_router
 from app.core.config import get_settings
-from app.core.database import init_db
+from app.core.database import init_db, should_run_startup_db_init
 
 settings = get_settings()
 
 
 @asynccontextmanager
 async def lifespan(app: FastAPI):
-    await init_db()
+    if should_run_startup_db_init():
+        await init_db()
     yield
 
 
@@ -42,6 +43,19 @@ def create_app() -> FastAPI:
         return response
 
     app.include_router(api_router, prefix="/api/v1")
+
+    @app.get("/", include_in_schema=False)
+    async def root() -> dict[str, str]:
+        return {
+            "status": "ok",
+            "health": "/api/v1/health",
+            "docs": "/docs",
+        }
+
+    @app.get("/favicon.ico", include_in_schema=False)
+    @app.get("/favicon.png", include_in_schema=False)
+    async def favicon() -> Response:
+        return Response(status_code=204)
 
     return app
 

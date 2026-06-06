@@ -1,14 +1,6 @@
 {
-  "builds": [
-    {
-      "src": "app/main.py",
-      "use": "@vercel/python"
-    }
-  ],
-  "routes": [
-    {
-      "src": "/(.*)",
-      "dest": "app/main.py"
-    }
-  ]
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "env": {
+    "SKIP_STARTUP_DB_INIT": "1"
+  }
 }
