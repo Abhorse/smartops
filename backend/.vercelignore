@@ -4,4 +4,4 @@ tests
 conftest.py
 requirements-dev.txt
 .env
-.env.*
+.env.local

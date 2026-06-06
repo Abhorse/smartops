@@ -2,11 +2,5 @@
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "env": {
     "SKIP_STARTUP_DB_INIT": "1"
-  },
-  "functions": {
-    "app/main.py": {
-      "maxDuration": 10,
-      "excludeFiles": "{tests/**,.venv/**,**/__pycache__/**,**/*.pyc,conftest.py}"
-    }
   }
 }
